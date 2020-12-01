@@ -1,0 +1,40 @@
+[color]
+	diff = true
+	ui = true
+[core]
+	editor = vim
+[diff]
+	renames = copies
+	tool = vimdiff3
+[difftool]
+	prompt = false
+[difftool "vimdiff3"]
+	path = vim
+[color "diff"]
+	whitespace = red
+[core]
+	excludesfile = ~/.gitignore
+	pager = less -F -X
+[fetch]
+	prune = true
+[grep]
+	extendRegexp = true
+	lineNumber = true
+  [include]
+	path = ~/.gitconfig.local
+[init]
+	templatedir = ~/.git_template
+[merge]
+	tool = vimdiff3
+[mergetool "vimdiff3"]
+	path = nvim
+[push]
+	default = current
+[user]
+	email = rochepauline6@gmail.com
+	name = Oluane
+	useconfigonly = true
+[url "git@github.com:oluane/"]
+	insteadOf = "oluane:"
+[url "git@github.com:fewlinesco/"]
+	insteadOf = "fewlines:"
