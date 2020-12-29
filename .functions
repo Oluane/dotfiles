@@ -5,7 +5,6 @@ export_dotfiles() {
   && cp.gitconfig \
   && cp.gitignore \
 }
-
 import_dotfiles() {
   cp ~/workspace/dotfiles/.zshrc ~/.zshrc \
   && cp ~/workspace/dotfiles/.aliases ~/.zsh/.aliases \
@@ -13,53 +12,42 @@ import_dotfiles() {
   && cp ~/workspace/dotfiles.gitconfig ~/.gitconfig \
   && cp ~/workspace/dotfiles/.gitignore ~/.gitignore \
 }
-
 function find-exec() {
   find . -type f -iname "*${1:-}*" -exec "${2:-file}" '{}' \;
 }
-
 # Better find(1)
 function ff() {
   find . -iname "*${1:-}*"
 }
-
 api_key() {
   size=${1:-16}
   openssl rand -hex ${size}
 }
-
 gclone() {
 	git clone "$1" && cd "$(basename "$1" .git)"
 }
-
 # Markdown
 md() {
   pandoc $1 | lynx -stdin -dump
 }
-
 # Open man page as PDF
 manpdf() {
   man -t "$1" | open -f -a /Applications/Preview.app/
 }
-
 mk() {
   mkdir -p "$@" && cd "$@"
 }
-
 port_in_use() {
   local port=${1:?"you should set a port"}
   lsof -n -i:${port} | grep LISTEN
 }
-
 uuid() {
-  uuidgen | tr '[:upper:]' '[:lower:]' | tr -d '\n'
+  uuidgen | tr '[:upper:]' '[:lower:]' | tr -d '\n' | pbcopy
 }
-
 wth() {
   city=${1:?"Choose a city"}
   curl "wttr.in/${city}"
 }
-
 function _calcram() {
   local sum
   sum=0
@@ -69,7 +57,6 @@ function _calcram() {
   sum=$(echo "scale=2; $sum / 1024.0" | bc)
   echo $sum
 }
-
 # Show how much RAM application uses.
 # $ ram safari
 # # => safari uses 154.69 MBs of RAM
@@ -80,7 +67,6 @@ function ram() {
     echo "First argument - pattern to grep from processes"
     return 0
   fi
-
   sum=$(_calcram $app)
   if [[ $sum != "0" ]]; then
     echo "${fg[blue]}${app}${reset_color} uses ${fg[green]}${sum}${reset_color} MBs of RAM"
@@ -88,7 +74,6 @@ function ram() {
     echo "No active processes matching pattern '${fg[blue]}${app}${reset_color}'"
   fi
 }
-
 # Same, but tracks RAM usage in realtime. Will run until you stop it.
 # $ rams safari
 function rams() {
@@ -98,7 +83,6 @@ function rams() {
     echo "First argument - pattern to grep from processes"
     return 0
   fi
-
   while true; do
     sum=$(_calcram $app)
     if [[ $sum != "0" ]]; then
@@ -109,7 +93,6 @@ function rams() {
     sleep 1
   done
 }
-
 # $ size dir1 file2.js
 function size() {
   # du -scBM | sort -n
