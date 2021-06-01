@@ -39,4 +39,4 @@
 [url "git@github.com:fewlinesco/"]
 	insteadOf = "fewlines:"
 [pull]
-	ff = only
+	ff = true
