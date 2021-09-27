@@ -46,6 +46,7 @@ alias fwl.sparta="cd ~/workspace/fewlines/education/sparta-monorepo"
 alias fwl.web="cd ~/workspace/fewlines/node-web-libraries"
 alias perso.map="cd ~/workspace/personal/map-generator"
 alias perso.zelda="cd ~/workspace/personal/lille-0919-js-projet2-zeldaSnes"
+alias perso="cd ~/workspace/personal"
 
 ## Scripts
 alias ytb="yarn db:create-users-table"

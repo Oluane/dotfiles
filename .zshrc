@@ -132,6 +132,7 @@ PATH="${HOME}/.local/bin:${PATH}"
 PATH="${HOME}/.asdf/shims:${PATH}"
 PATH="${HOME}/.bin:${PATH}"
 [[ -r ${HOME}/.asdf/asdf.sh ]] && source ${HOME}/.asdf/asdf.sh
+export PATH="$PATH:$(yarn global bin)"
 
 source ${HOME}/.zsh/.aliases
 source ${HOME}/.zsh/.functions
