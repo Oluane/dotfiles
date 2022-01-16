@@ -1,42 +1,88 @@
-[color]
-	diff = true
-	ui = true
-[core]
-	editor = vim
-[diff]
-	renames = copies
-	tool = vimdiff3
-[difftool]
-	prompt = false
-[difftool "vimdiff3"]
-	path = vim
-[color "diff"]
-	whitespace = red
-[core]
-	excludesfile = ~/.gitignore
-	pager = less -F -X
-[fetch]
-	prune = true
-[grep]
-	extendRegexp = true
-	lineNumber = true
-  [include]
-	path = ~/.gitconfig.local
-[init]
-	templatedir = ~/.git_template
-[merge]
-	tool = vimdiff3
-[mergetool "vimdiff3"]
-	path = nvim
-[push]
-	default = current
 [user]
 	email = rochepauline6@gmail.com
 	name = Oluane
 	useconfigonly = true
+
 [url "git@github.com:oluane/"]
 	insteadOf = "oluane:"
-[url "git@github.com:fewlinesco/"]
-	insteadOf = "fewlines:"
+
+[alias]
+  tags = tag -l
+  branches = branch -a
+  remotes = remote -v
+  hist = log --graph --pretty=format:'%Cred%h%Creset %s%C(yellow)%d%Creset %Cgreen(%cr)%Creset [%an]' --abbrev-commit --date=relative
+
+[color]
+	diff = true
+	ui = auto
+
+[color "diff"]
+	whitespace = red
+
+[core]
+	editor = nvim
+
+[diff]
+  mnemonicPrefix = true
+	renames = true
+	submodule = log
+  tool = vscode
+
+[difftool]
+	prompt = false
+	editor = code --wait
+
+[difftool "vscode"]
+  cmd = code --wait --diff $LOCAL $REMOTE
+
+[log]
+  abbrevCommit = true
+  follow = true
+  decorate = false
+
+[core]
+	excludesfile = ~/.gitignore
+	pager = less -F -X
+
+[fetch]
+	prune = true
+
+[grep]
+  break = true
+  heading = true
+	extendRegexp = true
+	lineNumber = true
+
+[init]
+	templateDir = /Users/fuzznimp/.git-templates
+	defaultBranch = main
+
+[merge]
+  ff = false
+
+[mergetool]
+  keepBackup = false
+  keepTemporaries = false
+  writeToTemp = true
+  prompt = false
+
+[push]
+	default = current
+	
 [pull]
 	ff = true
+
+[status]
+  submoduleSummary = true
+  showUntrackedFiles = all
+
+[tag]
+  sort = version:refname
+
+[versionsort]
+  prereleaseSuffix = -pre
+  prereleaseSuffix = .pre
+  prereleaseSuffix = -beta
+  prereleaseSuffix = .beta
+  prereleaseSuffix = -rc
+  prereleaseSuffix = .rc

@@ -6,12 +6,17 @@ alias functions="declare -f | grep '^[a-z].* ()' | sed 's/{$//'"
 alias paths="echo -e ${PATH//:/\\n}"
 
 # Dotfiles
+## Shell
 alias cp.zshrc="cp ~/.zshrc ~/workspace/dotfiles"
 alias cp.alias="cp ~/.zsh/.aliases ~/workspace/dotfiles"
 alias cp.function="cp ~/.zsh/.functions ~/workspace/dotfiles"
+## Git
 alias cp.gitconfig="cp ~/.gitconfig ~/workspace/dotfiles"
 alias cp.gitignore="cp ~/.gitignore ~/workspace/dotfiles"
-# alias cp.snippet="cp ~/Library/Application Support/Code/User/snippets/fuzznimp.code-snippets ~/workspace/dotfiles"
+alias cp.gittemplates="cp -R ~/.git-templates ~/workspace/dotfiles"
+## VSCode
+alias cp.vscode.keybindings="cp ~/Library/Application\ Support/Code/User/keybindings.json ~/workspace/dotfiles"
+alias cp.vscode.settings="cp ~/Library/Application\ Support/Code/User/settings.json ~/workspace/dotfiles"
 
 # System
 alias ~="cd ~"
@@ -49,9 +54,6 @@ alias perso.zelda="cd ~/workspace/personal/lille-0919-js-projet2-zeldaSnes"
 alias perso="cd ~/workspace/personal"
 alias perso.website="cd ~/workspace/personal/personal-website"
 
-## Scripts
-alias ytb="yarn db:create-users-table"
-
 # ls
 alias ll="exa --all --long --header --git"
 alias lt="exa -aT --color=always --group-directories-first --ignore-glob='**/node_modules|**/dist|**/.next'"
@@ -61,13 +63,8 @@ alias tarr="tar -pczf $1 $2"
 alias untarr="tar -pxzf $1"
 alias starr="sudo tar -pczf $1 $2"
 
-# Overmind
-alias hv="hivemind"
-alias ov="overmind"
-
 # Mac
 alias cask="brew cask"
-alias update="brew update && brew upgrade && brew cleanup && asdf update && asdf plugin-update --all && mas upgrade"
 alias delete.ds="find . -type f -name '*.DS_Store' -ls -delete"
 alias delete.ad="find . -type d -name '.AppleD*' -ls -exec /bin/rm -r {} \;"
 alias desktopshow="defaults write com.apple.finder CreateDesktop -bool true && killfinder"
@@ -91,9 +88,10 @@ alias gsd="git stash drop"
 alias gca="git commit --amend"
 alias gb="git rebase"
 alias gbd="git branch -D"
-alias gl="git log --pretty=oneline --abbrev-commit"
+alias gl="git log --graph --date=relative --pretty=tformat:'%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%an %ad)%Creset'"
 alias grh="git reset --hard HEAD"
 alias gbleach="git branch -vv | grep 'gone'] | awk '{ print $1 }' | xargs git branch -D"
+
 
 # Vim
 alias vim="nvim"

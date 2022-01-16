@@ -1,9 +1,3 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
 autoload -U colors && colors
 COMMON_PROMPT_SYMBOL="%{%G❯%}"
 COMMON_COLORS_HOST_ME=green
@@ -81,7 +75,6 @@ common_bg_jobs() {
 }
 setopt PROMPT_SUBST
 
-# PROMPT='$(common_host)$(common_current_dir)$(common_bg_jobs)$(icon_git_status) $(common_return_status)'
 PROMPT='$(common_host)$(common_current_dir)$(common_bg_jobs)$(common_git_status) $(common_return_status)'
 
 autoload -Uz compinit && compinit
@@ -126,14 +119,15 @@ ZSH_HIGHLIGHT_STYLES[double-hyphen-option]=fg=208,bold
 ZSH_HIGHLIGHT_STYLES[path]=fg=255,bold
 ZSH_HIGHLIGHT_STYLES[path_pathseparator]=fg=208,bold
 
-PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
-PATH="/usr/local/sbin:$PATH"
-PATH="${HOME}/.local/bin:${PATH}"
-PATH="${HOME}/.asdf/shims:${PATH}"
-PATH="${HOME}/.bin:${PATH}"
-[[ -r ${HOME}/.asdf/asdf.sh ]] && source ${HOME}/.asdf/asdf.sh
-export PATH="$PATH:$(yarn global bin)"
+export PATH=/opt/homebrew/bin:$PATH
 
 source ${HOME}/.zsh/.aliases
 source ${HOME}/.zsh/.functions
-source /usr/local/opt/zsh-syntax-highlighting/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+ ## React Native
+export ANDROID_HOME=$HOME/Library/Android/sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/tools/bin
+export PATH=$PATH:$ANDROID_HOME/platform-tools
