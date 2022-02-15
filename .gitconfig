@@ -54,7 +54,7 @@
 	lineNumber = true
 
 [init]
-	templateDir = /Users/fuzznimp/.git-templates
+	templateDir = /Users/oluane/.git-templates
 	defaultBranch = main
 
 [merge]
@@ -86,3 +86,8 @@
   prereleaseSuffix = .beta
   prereleaseSuffix = -rc
   prereleaseSuffix = .rc
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true

@@ -1,113 +1,115 @@
 {
-  "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
-  },
-  "eslint.format.enable": true,
-  "editor.defaultFormatter": "dbaeumer.vscode-eslint",
-  "[javascript]": {
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
-  },
-  "[javascriptreact]": {
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
-  },
-  "[typescript]": {
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
-  },
-  "[typescriptreact]": {
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
-  },
-  "[graphql]": {
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
-  },
-  "[json]": {
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
-  },
-  "workbench.iconTheme": "vscode-icons",
-  "[markdown]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[jsonc]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "search.exclude": {
-    "**/.next": true,
-    "yarn.lock": true,
-    "**/node_modules": true
-  },
-  "terminal.integrated.defaultProfile.osx": "/bin/zsh",
-  "git.suggestSmartCommit": false,
-  "workbench.startupEditor": "newUntitledFile",
-  "explorer.confirmDelete": false,
-  "editor.formatOnSave": true,
-  "editor.fontFamily": "Fira Code",
-  "editor.fontLigatures": true,
-  "workbench.colorTheme": "Nord Wave",
-  "editor.minimap.enabled": false,
-  "prettier.endOfLine": "auto",
-  "window.nativeTabs": true,
-  "window.openFoldersInNewWindow": "on",
-  "typescript.updateImportsOnFileMove.enabled": "always",
-  "extensions.ignoreRecommendations": true,
-  "javascript.updateImportsOnFileMove.enabled": "always",
-  "gruvboxMaterial.darkContrast": "hard",
-  "gruvboxMaterial.darkCursor": "purple",
-  "gruvboxMaterial.darkSelection": "blue",
-  "gruvboxMaterial.darkWorkbench": "high-contrast",
-  "cSpell.ignoreWords": [
-    "Procfile",
-    "algo",
-    "behaviour",
-    "browserslist",
-    "codegen",
-    "deduping",
-    "dotfiles",
-    "eigengrau",
-    "fadeinout",
-    "fewlines",
-    "fontsource",
-    "fuzznimp",
-    "jetify",
-    "lightstep",
-    "middlewares",
-    "miovision",
-    "oluane",
-    "opentelemetry",
-    "prefetch",
-    "pullall",
-    "pushall",
-    "remoteaddr",
-    "roboto",
-    "stylelint",
-    "taiko",
-    "tsbuildinfo",
-    "unmarshall",
-    "uuidv",
-    "vercel",
-    "xkcu"
-  ],
-  "cSpell.userWords": [
-    "brigad",
-    "brigader",
-    "BRIGADERS",
-    "datepicker",
-    "hubspot",
-    "meyclem",
-    "noninteractive",
-    "scrollable"
-  ],
-  "typescript.disableAutomaticTypeAcquisition": true,
-  "files.watcherExclude": {
-    "**/.git/objects/**": true,
-    "**/.git/subtree-cache/**": true,
-    "**/node_modules/**": true
-  },
-  "liveshare.presence": true,
-  "editor.tabSize": 2,
-  "editor.detectIndentation": false,
-  "[scss]": {
-    "editor.defaultFormatter": "sibiraj-s.vscode-scss-formatter"
-  },
-  "scssFormatter.printWidth": 80,
-  "bracketPairColorizer.depreciation-notice": false,
-  "errorLens.delay": 2000
-}
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true
+    },
+    "eslint.format.enable": true,
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+    "[javascript]": {
+      "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    },
+    "[javascriptreact]": {
+      "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    },
+    "[typescript]": {
+      "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    },
+    "[typescriptreact]": {
+      "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    },
+    "[graphql]": {
+      "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    },
+    "[json]": {
+      "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    },
+    "[markdown]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[jsonc]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "search.exclude": {
+      "**/.next": true,
+      "yarn.lock": true,
+      "**/node_modules": true
+    },
+    "terminal.integrated.defaultProfile.osx": "/bin/zsh",
+    "git.suggestSmartCommit": false,
+    "workbench.startupEditor": "newUntitledFile",
+    "explorer.confirmDelete": false,
+    "editor.formatOnSave": true,
+    "editor.fontFamily": "Fira Code",
+    "editor.fontLigatures": true,
+    "editor.minimap.enabled": false,
+    "prettier.endOfLine": "auto",
+    "window.nativeTabs": true,
+    "window.openFoldersInNewWindow": "on",
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "extensions.ignoreRecommendations": true,
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "gruvboxMaterial.darkContrast": "hard",
+    "gruvboxMaterial.darkCursor": "purple",
+    "gruvboxMaterial.darkSelection": "blue",
+    "gruvboxMaterial.darkWorkbench": "high-contrast",
+    "cSpell.ignoreWords": [
+      "Procfile",
+      "algo",
+      "behaviour",
+      "browserslist",
+      "codegen",
+      "deduping",
+      "dotfiles",
+      "eigengrau",
+      "fadeinout",
+      "fewlines",
+      "fontsource",
+      "fuzznimp",
+      "jetify",
+      "lightstep",
+      "middlewares",
+      "miovision",
+      "oluane",
+      "opentelemetry",
+      "prefetch",
+      "pullall",
+      "pushall",
+      "remoteaddr",
+      "roboto",
+      "stylelint",
+      "taiko",
+      "tsbuildinfo",
+      "unmarshall",
+      "uuidv",
+      "vercel",
+      "xkcu"
+    ],
+    "cSpell.userWords": [
+      "brigad",
+      "brigader",
+      "BRIGADERS",
+      "datepicker",
+      "Entypo",
+      "hubspot",
+      "meyclem",
+      "noninteractive",
+      "scrollable"
+    ],
+    "typescript.disableAutomaticTypeAcquisition": true,
+    "files.watcherExclude": {
+      "**/.git/objects/**": true,
+      "**/.git/subtree-cache/**": true,
+      "**/node_modules/**": true
+    },
+    "liveshare.presence": true,
+    "editor.tabSize": 2,
+    "editor.detectIndentation": false,
+    "[scss]": {
+      "editor.defaultFormatter": "sibiraj-s.vscode-scss-formatter"
+    },
+    "scssFormatter.printWidth": 80,
+    "bracketPairColorizer.depreciation-notice": false,
+    "errorLens.delay": 2000,
+    "workbench.colorTheme": "Nord Wave",
+    "workbench.iconTheme": "vscode-icons"
+  }
+  
