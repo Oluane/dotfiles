@@ -1,4 +1,4 @@
-# Source Shell
+z# Source Shell
 alias reload.zsh="source ~/.zshrc"
 # List declared aliases, functions, path
 alias aliases="alias | sed 's/=.*//'"
@@ -59,12 +59,13 @@ alias perso="cd ~/workspace/personal"
 alias perso.website="cd ~/workspace/personal/personal-website"
 
 ### Brigad
-alias bgd="cd ~/workspace/brigad/front-end/packages"
+alias bgd="cd ~/workspace/brigad/front-end"
 alias bgd.e2e="cd ~/workspace/brigad/front-end/packages/util-end-to-end-tests"
 alias bgd.jb="cd ~/workspace/brigad/front-end/packages/service-job-board"
 alias bgd.jbbr="cd ~/workspace/brigad/front-end/packages/service-job-board-mobile-brigader"
 alias bgd.jbb="cd ~/workspace/brigad/front-end/packages/service-job-board-mobile-business"
 alias bgd.admin="cd ~/workspace/brigad/front-end/packages/service-admin-panel"
+alias bgd.ds="cd ~/workspace/brigad/front-end/packages/util-design-system"
 
 # ls
 alias ll="exa --all --long --header --git"
@@ -86,12 +87,13 @@ alias cpu="sysctl -n machdep.cpu.brand_string"
 
 # Git
 alias gst="git status"
+alias gc="git checkout"
 alias gcb="git checkout -b"
 alias gd="git diff"
 alias ga="git add"
 alias gcm="git commit -m"
 alias gpo="git push -u origin"
-alias gpof="git push origin--force-with-lease"
+alias gpof="git push origin --force-with-lease"
 alias gpoff="git push origin --force-with-lease --no-verify"
 alias gp="git pull origin"
 alias gtl="git stash list"
