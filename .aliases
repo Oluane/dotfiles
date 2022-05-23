@@ -1,4 +1,4 @@
-z# Source Shell
+# Source Shell
 alias reload.zsh="source ~/.zshrc"
 # List declared aliases, functions, path
 alias aliases="alias | sed 's/=.*//'"
@@ -57,6 +57,8 @@ alias perso.map="cd ~/workspace/personal/map-generator"
 alias perso.zelda="cd ~/workspace/personal/lille-0919-js-projet2-zeldaSnes"
 alias perso="cd ~/workspace/personal"
 alias perso.website="cd ~/workspace/personal/personal-website"
+alias perso.csd="cd ~/workspace/personal/candle_shop_deprecated"
+alias perso.csts="cd ~/workspace/personal/candle_shop_ts"
 
 ### Brigad
 alias bgd="cd ~/workspace/brigad/front-end"
