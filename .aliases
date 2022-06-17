@@ -69,6 +69,18 @@ alias bgd.jbb="cd ~/workspace/brigad/front-end/packages/service-job-board-mobile
 alias bgd.admin="cd ~/workspace/brigad/front-end/packages/service-admin-panel"
 alias bgd.ds="cd ~/workspace/brigad/front-end/packages/util-design-system"
 
+### Sencrop
+alias scp="cd ~/workspace/sencrop"
+alias scp.app="cd ~/workspace/sencrop/sencrop-app"
+alias scp.bo="cd ~/workspace/sencrop/sencrop-backoffice"
+alias scp.bali="cd ~/workspace/sencrop/sencrop-bali-api"
+alias scp.demeter="cd ~/workspace/sencrop/sencrop-demeter-api"
+alias scp.e2e="cd ~/workspace/sencrop/sencrop-e2e"
+alias scp.infra="cd ~/workspace/sencrop/infrastructure-sencrop"
+alias scp.map="cd ~/workspace/sencrop/sencrop-map"
+alias scp.quote="cd ~/workspace/sencrop/sencrop-quotator"
+alias scp.ui="cd ~/workspace/sencrop/sencrop-ui"
+
 # ls
 alias ll="exa --all --long --header --git"
 alias lt="exa -aT --color=always --group-directories-first --ignore-glob='**/node_modules|**/dist|**/.next'"
